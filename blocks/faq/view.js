@@ -1,0 +1,1 @@
+document.querySelectorAll(".faq").forEach(e=>{e?.addEventListener("click",()=>{e.classList.toggle("active")})});
