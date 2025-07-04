@@ -15,10 +15,6 @@ Task #3
 
 Books custom post types and Genre taxonomy were added in the functions.php file.
 
-Task #4
-
-4.2 – Copied the original file from the TwentyTwentyFive theme (archive.html) — we can make some changes here.
-
 Task #5
 
 Registered in the theme (not a plugin) and created using @wordpress/scripts.

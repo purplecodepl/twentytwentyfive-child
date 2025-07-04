@@ -97,4 +97,22 @@ function add_genre_names_to_books() {
 }
 add_action('rest_api_init', 'add_genre_names_to_books');
 
-register_block_type(get_stylesheet_directory() . '/blocks/faq');
+//register pattern
+function twentytwentyfive_child_register_block_patterns() {
+    $pattern_file = get_stylesheet_directory() . '/patterns/template-query-loop-book.php';
+
+    if (file_exists($pattern_file)) {
+        $content = file_get_contents($pattern_file);
+
+        register_block_pattern(
+            'twentytwentyfive-child/template-query-loop-book',
+            array(
+                'title'       => __('Query Loop for Books', 'twentytwentyfive-child'),
+                'description' => __('New pattern', 'twentytwentyfive-child'),
+                'categories'  => array('query'),
+                'content'     => $content,
+            )
+        );
+    }
+}
+add_action('init', 'twentytwentyfive_child_register_block_patterns');
